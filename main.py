@@ -1,7 +1,7 @@
 import discord, random
 from discord.ext import commands
 
-TOKEN = "MTA4MjAzOTMyOTM2ODU4NDIwMg.GZn3E0.hfAeEzdV8zsRCSsdCmR6VD7aRM7hdTH92KxabE"
+TOKEN = "MTA4MjAzOTMyOTM2ODU4NDIwMg.Gh0hHg.UOdERvK7obs6ymsycEkQnBHvf62j_QnirBVgx4"
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -10,9 +10,10 @@ bot = commands.Bot(command_prefix="$", intents=intents)
 
 
 @bot.command()
-async def roll(ctx):
-  d = random.randint(1, 6)
-  await ctx.channel.send(f"Rolling a D6 : {d} ")
+async def roll(ctx,num):
+  for i in range(int(num)):
+    d = random.randint(1, 6)
+    await ctx.channel.send(f"Rolling a D6 : {d} ")
 
 
 @bot.command()
