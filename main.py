@@ -16,7 +16,7 @@ async def roll(ctx):
 
 
 @bot.command()
-async def ask(ctx, *words):
+async def Ask(ctx, *words):
   st = ""
   for word in words:
     st += word
